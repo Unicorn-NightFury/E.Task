@@ -29,7 +29,10 @@ html,body{
     box-sizing: border-box;
     background-color: #282c34;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    /* box-shadow: 2px 3px 0 black; */
+    border: 0.5px solid black;
+    box-shadow: 1px 0px 1px rgba(0,0,0,.8);
 }
 
 .sidebar{
@@ -205,6 +208,10 @@ html,body{
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    z-index: -1;
+    background-image: url("../static/img/sidebar-task-bg.jpg");
+
+    
 }
 
 .sidebar-task-header{
@@ -238,8 +245,51 @@ html,body{
     position: relative;
     width: 100%;
     height: 50px;
-    background-color: pink;
+    background-color: rgba(255,255,255,0.6);
+    margin-bottom: 0;
+    line-height: 50px;
+    display: flex;;
+    justify-content: space-between;
+    overflow: hidden;
+    transition:all 0.5s ease-in-out;
+    cursor: pointer;
 }
+
+.sidebar-task-item:hover {
+    border: 0.1px solid rgba(0,0,0,.3);
+    box-shadow: 0px 12px 7px rgba(0,0,0,.8);
+}
+
+.sidebar-task-item-left {
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.sidebar-task-item-right {
+    position: relative;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+/* 鼠标悬浮触发任务项闪光效果 */
+.sidebar-task-item-shank {
+    position: absolute;
+    height: 120%;
+    width: 5%;
+    background-color: white;
+    transform: rotate(-10deg);
+    z-index: 3;
+    filter: blur(4px);
+    box-shadow: 0 0 3px rgba(200,200,200,.8);
+    left: -100px;
+}
+
+
 
 /* 2-2  任务点样式*/
 .sidebar-box{
