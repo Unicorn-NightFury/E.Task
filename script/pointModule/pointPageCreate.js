@@ -2,7 +2,9 @@ var  pointPageCreate = (document) => {
 
     $(document).on('click', '.sidebar-point-item', function(){
         $(".main-welcome").hide();
+        $(".main-memory").hide();
         pointItemRes();
+        
     })
 
     function pointItemRes(){

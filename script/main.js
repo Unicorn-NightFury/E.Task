@@ -3,6 +3,7 @@ import getTaskList from './taskModule/getTaskList.js'
 import changeButton from './taskModule/changeButton.js'
 import pointPageCreate from './pointModule/pointPageCreate.js'
 import { taskItemAnimation } from './taskModule/taskItemAnimation.js'
+import { showMemories } from './memory/showMemories.js'
 
 
 let pointAxios = 0, // 任务节点侧边栏是否请求渲染
@@ -52,3 +53,6 @@ pointPageCreate(document);
 
 // 任务列表中，任务项的鼠标悬浮特效
 taskItemAnimation(document);
+
+// 个人备忘录展示
+showMemories();

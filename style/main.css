@@ -653,3 +653,18 @@ html,body{
     z-index: 5;
     left: -120%;
 }
+
+
+
+/* 3-4 个人备忘录 @main-memory*/
+/* .main-memory {
+
+} */
+
+.sidebar-list{
+    background-image: url("../static/img/memoryBackground.jpg");
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+}
