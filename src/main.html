@@ -72,14 +72,30 @@
            </div>
 
            <!-- 备忘录 -->
-           <div class="sidebar-box sidebar-list"></div>
+           <div class="sidebar-box sidebar-list">
+                <div class="sidebar-memory-head">
+                    <div class="sidebar-memory-head-left"><span>备忘录</span></div>
+                    <div class="sidebar-memory-head-right"><span>+</span></div>
+                </div>
+                <!-- 个人备忘录列表模板 -->
+                <div class="sidebar-memory-item">
+                    <div class="sidebar-memmory-item-title">
+                        <span>备忘录细节设计笔记</span>
+                    </div>
+                    <div class="sidebar-memmory-item-date">
+                        <span>2020/3/10</span>
+                    </div>
+                   
+                </div>
+
+           </div>
         </div>
 
 
         <!-- 功能展示栏 -->
         <div class="main">
-            <div class="main-welcome">
-                <div class="main-welcome-text">
+            <div class="main-welcome show-page-box">
+                <div class="main-welcome-text ">
                     <h1>E.Task</h1>
                     <h3>404 we found</h3>
                 </div>
@@ -89,7 +105,7 @@
             <!-- 任务功能的具体展示 -->
             <div class="main-task">
                 <!-- 任务创建面板 -->
-                <div class="main-task-create">
+                <div class="main-task-create show-page-box">
                     <div class="main-task-create-name">
                         <h2>创建任务</h2>
                         <input type="text" id="taskName" placeholder="请创建任务名...">
@@ -107,10 +123,32 @@
                     </div>
                     <div class="main-task-create-btn"><span>创建任务</span></div>
                 </div>
+
+                <!-- 任务会话窗口骨架 -->
+                <div class="main-task-show">
+                    <div class="main-task-show-text">
+                        
+                        <!-- 用户消息模板 -->
+                        <div class="main-task-show-user main-task-show-message">
+                            <div class="main-task-show-logo"></div>
+                            <div class="main-task-show-context"></div>
+                        </div>
+
+                        <!-- 协作者消息模板 -->
+                        <div class="main-task-show-friend main-task-show-message"></div>
+                    </div>
+                    <div class="main-task-show-input">
+                        <input type="text" placeholder="积极地参与讨论吧~">
+                        <div class="main-task-show-btn">
+                            <span>发送</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- 任务节点展示 -->
-            <div class="main-point">
+            <div class="main-point show-page-box">
                 <div class="main-point-box">
 
                     <!-- 任务进度点模板 -->

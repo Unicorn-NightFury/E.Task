@@ -548,7 +548,107 @@ html,body{
     }
 }
 
+/*3-2-2 任务详细内容及会话界面 @main-task-show*/
+.main-task-show {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: url("../static/img/taskShowBg.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    z-index: 3;
+    display: none;
+}
 
+.main-task-show-text {
+    position: relative;
+    height: 90%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.main-task-show-input {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .9);
+    border-top: 1px #f8f8f8 solid;
+}
+
+.main-task-show-input input {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top:0px;
+    bottom: 0px;
+    margin: auto;
+    height: 50%;
+    width: 75%;
+    background-color: white;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.main-task-show-input input:focus {
+    box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    outline: none;
+    border: .5px solid #f8f8f8;
+}
+
+.main-task-show-btn {
+    height: 50%;
+    width: 70px;
+    background-color: lightseagreen;
+    position: absolute;
+    top: 25%;
+    right: 3%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.main-task-show-btn::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 2px;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale(0, 0);
+    transition: transform 0.45s ease-in-out;
+    background-color: #42c9ee;
+}
+.main-task-show-btn:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale(50, 50);
+}
+
+.main-task-show-btn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+}
+.main-task-show-btn span {
+    color: white;
+    size: 16px;
+    font-weight: 600;
+}
+
+.main-task-show-message {
+    width: 200px;
+    padding: 10px 5px;
+    position: relative;
+    background-color: red;
+}
+
+.main-task-show-user {
+    left: 75%;
+}
 
 
 /* 任务进度阶段渲染 3-3 @main-point */
@@ -667,4 +767,57 @@ html,body{
     width: 100%;
     position: relative;
     background-size: cover;
+}
+
+
+.sidebar-memory-head{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.sidebar-memory-head-left {
+    position: relative;
+    float: left;
+    margin-left: 15px;
+    font-size: 20px;
+    color: rgba(0,0,0,.8);
+    text-shadow: 0px 2px 3px rgba(0,0,0,.8);
+}
+.sidebar-memory-head-right {
+    color: rgba(214, 147, 20, 0.8);
+    font-size: 30px;
+    font-weight: 500;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform .7s ease-in-out ;
+}
+.sidebar-memory-head-right:hover {
+    transform: rotate(360deg);
+}
+
+
+.sidebar-memory-item {
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+.sidebar-memmory-item-title {
+    height: 30px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(200,200,200,.8);
+}
+
+.sidebar-memmory-item-date {
+    box-sizing: border-box;
+    padding-left: 5px;
+    color: #777;
 }

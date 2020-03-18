@@ -4,6 +4,7 @@ import changeButton from './taskModule/changeButton.js'
 import pointPageCreate from './pointModule/pointPageCreate.js'
 import { taskItemAnimation } from './taskModule/taskItemAnimation.js'
 import { showMemories } from './memory/showMemories.js'
+import { openTask } from './taskModule/openTask.js'
 
 
 let pointAxios = 0, // 任务节点侧边栏是否请求渲染
@@ -42,6 +43,8 @@ window.onload = function(){
 // 创建任务模块
 createTask();
 
+// 任务会话展示
+openTask(document);
 
 // 功能侧边栏渲染转化模块
 changeButton();
