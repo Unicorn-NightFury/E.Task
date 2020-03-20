@@ -5,7 +5,7 @@ import pointPageCreate from './pointModule/pointPageCreate.js'
 import { taskItemAnimation } from './taskModule/taskItemAnimation.js'
 import { showMemories } from './memory/showMemories.js'
 import { openTask } from './taskModule/openTask.js'
-
+import { sendMessage } from './taskModule/sendMessage.js'
 
 let pointAxios = 0, // 任务节点侧边栏是否请求渲染
     listAxios = 0; //  个人备忘录侧边栏是否请求渲染
@@ -45,6 +45,9 @@ createTask();
 
 // 任务会话展示
 openTask(document);
+
+sendMessage(document, username);
+
 
 // 功能侧边栏渲染转化模块
 changeButton();

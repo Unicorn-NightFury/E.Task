@@ -565,6 +565,8 @@ html,body{
     height: 90%;
     width: 100%;
     background-color: rgba(255, 255, 255, .8);
+    box-sizing: border-box;
+    padding-top: 20px;
 }
 
 .main-task-show-input {
@@ -640,14 +642,62 @@ html,body{
 }
 
 .main-task-show-message {
-    width: 200px;
-    padding: 10px 5px;
     position: relative;
-    background-color: red;
+    width: 280px;
+    margin: 60px 0px;
 }
 
 .main-task-show-user {
-    left: 75%;
+    left: 69%
+}
+
+
+.main-task-show-logo {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.main-task-show-logo .logo-username {
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    color: #777;
+    font-size: 12px;
+    font-weight: 400;
+}   
+
+.main-task-show-context {
+    position: relative;
+    width: 200px;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.main-task-show-user .main-task-show-context {
+    background-color: #4fc08d;
+}
+
+.main-task-show-user .main-task-show-context::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 10px solid #4fc08d;
+    right: -17px;
+    top:50%;
+    transform: translate(0, -50%);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.main-task-show-friend {
+    left:3%;
+    background-color: white;
 }
 
 
